@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B50CDC26-78E4-42D0-99AD-EBC39890CDF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{08901A22-97C4-4EC5-A342-99BDF14BB96C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GADS2014M7.AV1Parte2", "GADS2014M7.AV1Parte2\GADS2014M7.AV1Parte2.csproj", "{0DE270D0-5A7E-4281-A0A2-AAD5987AAF2F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D7616201-7C6E-4326-835A-74E946376453} = {D7616201-7C6E-4326-835A-74E946376453}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GADS2014M7.Libray", "GADS2014M7.Libray\GADS2014M7.Libray.csproj", "{D7616201-7C6E-4326-835A-74E946376453}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DE270D0-5A7E-4281-A0A2-AAD5987AAF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE270D0-5A7E-4281-A0A2-AAD5987AAF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE270D0-5A7E-4281-A0A2-AAD5987AAF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE270D0-5A7E-4281-A0A2-AAD5987AAF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7616201-7C6E-4326-835A-74E946376453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7616201-7C6E-4326-835A-74E946376453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7616201-7C6E-4326-835A-74E946376453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7616201-7C6E-4326-835A-74E946376453}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DE270D0-5A7E-4281-A0A2-AAD5987AAF2F} = {08901A22-97C4-4EC5-A342-99BDF14BB96C}
+		{D7616201-7C6E-4326-835A-74E946376453} = {B50CDC26-78E4-42D0-99AD-EBC39890CDF3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\GADS2014M7.Libray.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\GADS2014M7.Libray.pdb
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\obj\Debug\GADS2014M7.Libray.csprojResolveAssemblyReference.cache
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\obj\Debug\GADS2014M7.Libray.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\obj\Debug\GADS2014M7.Libray.pdb
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\hibernate.cfg.xml
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\GADS2014M7.Libray.dll.config
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\Iesi.Collections.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\MySql.Data.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\NHibernate.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\Iesi.Collections.xml
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.Libray\bin\Debug\NHibernate.xml

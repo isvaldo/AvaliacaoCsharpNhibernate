@@ -1,0 +1,14 @@
+c:\users\isvaldopc\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\GADS2014M7.AV1Parte2.exe.config
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\GADS2014M7.AV1Parte2.exe
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\GADS2014M7.AV1Parte2.pdb
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\GADS2014M7.Libray.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\GADS2014M7.Libray.pdb
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\obj\Debug\GADS2014M7.AV1Parte2.csprojResolveAssemblyReference.cache
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\obj\Debug\GADS2014M7.AV1Parte2.exe
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\obj\Debug\GADS2014M7.AV1Parte2.pdb
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\hibernate.cfg.xml
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\Iesi.Collections.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\MySql.Data.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\NHibernate.dll
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\Iesi.Collections.xml
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\NHibernate.xml
