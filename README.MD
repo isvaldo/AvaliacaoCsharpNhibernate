@@ -112,7 +112,7 @@ namespace GADS2014M7.AV1Parte2
 }
  ```
  
- ### Aluno.cs
+### Aluno.cs
 
 ``` C#
 
@@ -148,8 +148,7 @@ namespace GADS2014M7.Libray
 
 ```
 
-
- ### Constantes.cs
+### Constantes.cs
 
 ``` C#
 using System;
