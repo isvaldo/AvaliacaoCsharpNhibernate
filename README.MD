@@ -1,10 +1,10 @@
-# Trabalho de C#
+# Trabalho de C #
 
 
 ## classes principais 
 
 
-```
+``` C#
   public class  ParseAluno<T>
     {
         private readonly T AlunoSource;
@@ -44,4 +44,4 @@
         }
     }
 	
-	´´´ 
+	Â´Â´Â´ 
