@@ -111,3 +111,63 @@ namespace GADS2014M7.AV1Parte2
     }
 }
  ```
+ 
+ ### Aluno.cs
+
+``` C#
+
+using System;
+using System.ComponentModel;
+using System.Text;
+
+namespace GADS2014M7.Libray
+{
+    public class Aluno
+    {
+        public int matricula {get;set;}
+        public string  nome {get;set;}
+        public string sobrenome {get;set;}
+        public string codigoCurso {get;set;}
+        public string nomeCurso {get;set;}
+        public Boolean statusAluno { get; set; }
+
+        public override string ToString()
+        {
+            StringBuilder sd = new StringBuilder();
+            foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(this))
+            {
+                string name = descriptor.Name;
+                object value = descriptor.GetValue(this);
+                sd.Append(name + " = " + value+"\n");
+            }
+            return sd.ToString();  
+        }
+
+    }      
+}
+
+```
+
+
+ ### Constantes.cs
+
+``` C#
+using System;
+using System.IO;
+namespace GADS2014M7.Libray.libs
+{
+    public class Constantes
+    {   
+        public static string PATH_APP = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+        public static string ARQUIVO_XML = "ExportaAlunos-Isvaldo.xml";
+        public static string NOME_PASTA = "static";
+        public static string FULL_PATH_XML_FILE = Path.Combine(PATH_APP, NOME_PASTA, ARQUIVO_XML);
+        public static string DATA_FORMAT = "yyyyMMdd-HHmmsstt";
+        public static string SAVE_NAME = "ExportaAlunos-IsvaldoFernandes" +
+            "-" + DateTime.Now.ToString(DATA_FORMAT);
+        public static string LOG_TYPE = "-Log.txt";
+        public static string XML_TYPE = ".xml";
+    }
+}
+
+
