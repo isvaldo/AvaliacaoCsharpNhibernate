@@ -8,26 +8,26 @@ namespace GADS2014M7.Libray.libs
     {
         public static void saveLog(List<Aluno> alunos)
         {
-            string nomeSaveLog = setType(Constantes.LOG_TYPE);
-            using (StreamWriter  file = new StreamWriter(getCaminhoArquivo(nomeSaveLog))) 
+            string nameToSave = setType(Constant.LOG_TYPE);
+            using (StreamWriter  file = new StreamWriter(BuildPathByName(nameToSave))) 
             {
                 alunos.ForEach(a => Console.WriteLine(a.ToString()));
             }
         }
-        public static string setType(string formato)
+        public static string setType(string format)
         {
-            return Constantes.SAVE_NAME + formato;
+            return Constant.NAME_FOR_SAVE + format;
         }
 
         public static void saveXML()
         {
-            string nomeSaveXml = setType(Constantes.XML_TYPE);
-            File.Copy(Constantes.FULL_PATH_XML_FILE, getCaminhoArquivo(nomeSaveXml));
+            string nameToSaveXml = setType(Constant.XML_TYPE);
+            File.Copy(Constant.FULL_PATH_XML_FILE, BuildPathByName(nameToSaveXml));
         }
 
-        public static String getCaminhoArquivo(string nomeArquivo)
+        public static String BuildPathByName(string fileName)
         {
-            return Path.Combine(Constantes.PATH_APP, Constantes.NOME_PASTA, nomeArquivo);
+            return Path.Combine(Constant.PATH_APP, Constant.SOURCE_STATIC, fileName);
         }
     }
 }

@@ -26,6 +26,7 @@ namespace GADS2014M7.Libray.libs
                     aluno => {
                         Aluno alunoNew = new Aluno();
                         alunoNew.nome = aluno.Element("Nome").Value;
+                        alunoNew.sobrenome = aluno.Element("Sobrenome").Value;
                         alunoNew.matricula = Convert.ToInt32(aluno.Element("Matricula").Value);
                         alunoNew.statusAluno = aluno.Element("StatusAluno").Value.Equals("0") ? false : true;
                         alunoNew.codigoCurso = aluno.Element("CodigoCurso").Value;

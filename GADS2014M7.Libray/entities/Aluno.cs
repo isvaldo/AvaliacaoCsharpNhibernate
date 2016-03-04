@@ -17,11 +17,7 @@ namespace GADS2014M7.Libray
         {
             StringBuilder sd = new StringBuilder();
             foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(this))
-            {
-                string name = descriptor.Name;
-                object value = descriptor.GetValue(this);
-                sd.Append(name + " = " + value+"\n");
-            }
+                sd.Append(descriptor.Name + " = " + descriptor.GetValue(this) + "\n");
             return sd.ToString();  
         }
 
