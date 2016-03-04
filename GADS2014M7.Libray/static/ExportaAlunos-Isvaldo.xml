@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Alunos>
+   <Aluno>
+      <Matricula>541</Matricula>
+      <Nome>scou</Nome>
+      <Sobrenome>Mello</Sobrenome>
+      <StatusAluno>1</StatusAluno>
+      <CodigoCurso>m20486</CodigoCurso>
+      <NomeCurso>Desenvolvimento de Aplicações Web MVC</NomeCurso>
+   </Aluno>
+
+   <Aluno>
+      <Matricula>591</Matricula>
+      <Nome>pedro</Nome>
+      <Sobrenome>Silva</Sobrenome>
+      <StatusAluno>1</StatusAluno>
+      <CodigoCurso>m20486</CodigoCurso>
+      <NomeCurso>Desenvolvimento de Aplicações Web MVC</NomeCurso>
+   </Aluno>
+</Alunos>

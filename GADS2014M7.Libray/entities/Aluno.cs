@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GADS2014M7.Libray
 {
@@ -14,6 +12,18 @@ namespace GADS2014M7.Libray
         public string codigoCurso {get;set;}
         public string nomeCurso {get;set;}
         public Boolean statusAluno { get; set; }
+
+        public override string ToString()
+        {
+            StringBuilder sd = new StringBuilder();
+            foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(this))
+            {
+                string name = descriptor.Name;
+                object value = descriptor.GetValue(this);
+                sd.Append(name + " = " + value+"\n");
+            }
+            return sd.ToString();  
+        }
 
     }      
 }

@@ -2,29 +2,22 @@
 using GADS2014M7.Libray;
 using GADS2014M7.Libray.libs;
 using System.Xml.Linq;
-using System.IO;
 using System.Collections.Generic;
 namespace GADS2014M7.AV1Parte2
 {
     class Program
     {
-        public static string fileName = @"C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\static\ExportaAlunos-Isvaldo.xml";
-       
         static void Main(string[] args)
         {
-            NHibernateHelper.GeraSchema();
-            string path =  Path.GetFullPath(fileName);
-            XDocument xmlDocument = XDocument.Load(path);
-            ParseAluno<XDocument> parse = new ParseAluno<XDocument>(xmlDocument);
-
-            List<Aluno> alunos = parse.getFromXml();
-
-            foreach (Aluno aluno in  alunos){
-                Console.Write(aluno.nome+"\n");
-            }
-
-            Console.Read();
-
+           // NHibernateHelper.GeraSchema(); // cria banco de dados
+            string fileName = Constantes.FULL_PATH_XML_FILE;
+            XDocument xmlDocument = XDocument.Load(fileName); // recebe o modelo
+            ParseAluno<XDocument> parse = new ParseAluno<XDocument>(xmlDocument); // chama Alguem competente para fazer parse de aluno
+            List<Aluno> alunos = parse.getFromXml(); // recebe a lista prontinha do parse
+            alunos.ForEach(a => Console.WriteLine(a.ToString())); // printa tudo na tela
+            AlunoFileMananger.saveXML(); // muda o nome do arquivo xml
+            AlunoFileMananger.saveLog(alunos); // salva um log tb
+            Console.Read(); // lock na tela
         }
     }
 }

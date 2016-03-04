@@ -12,3 +12,4 @@ C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Is
 C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\NHibernate.dll
 C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\Iesi.Collections.xml
 C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\NHibernate.xml
+C:\Users\isvaldoPC\documents\visual studio 2013\Projects\GADS2014M7.AV1Parte2.Isvaldo\GADS2014M7.AV1Parte2\bin\Debug\static\ExportaAlunos-Isvaldo.xml

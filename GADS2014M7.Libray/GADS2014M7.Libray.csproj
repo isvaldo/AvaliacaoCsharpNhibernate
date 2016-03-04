@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="libs\AlunoFileMananger.cs" />
+    <Compile Include="libs\Constantes.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="entities\Aluno.cs" />
     <Compile Include="libs\ParseAluno.cs" />
@@ -64,6 +66,10 @@
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="static\ExportaAlunos-Isvaldo.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
