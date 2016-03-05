@@ -4,7 +4,7 @@
 
 ### ParseAluno.cs
 ``` C#
-  using System;
+ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +32,7 @@ namespace GADS2014M7.Libray.libs
                     aluno => {
                         Aluno alunoNew = new Aluno();
                         alunoNew.nome = aluno.Element("Nome").Value;
+                        alunoNew.sobrenome = aluno.Element("Sobrenome").Value;
                         alunoNew.matricula = Convert.ToInt32(aluno.Element("Matricula").Value);
                         alunoNew.statusAluno = aluno.Element("StatusAluno").Value.Equals("0") ? false : true;
                         alunoNew.codigoCurso = aluno.Element("CodigoCurso").Value;
@@ -53,6 +54,7 @@ namespace GADS2014M7.Libray.libs
     }
 }
 
+
 	
 ``` 
 
@@ -69,26 +71,26 @@ namespace GADS2014M7.Libray.libs
     {
         public static void saveLog(List<Aluno> alunos)
         {
-            string nameToSave = setType(Constantes.LOG_TYPE);
+            string nameToSave = setType(Constant.LOG_TYPE);
             using (StreamWriter  file = new StreamWriter(BuildPathByName(nameToSave))) 
             {
                 alunos.ForEach(a => Console.WriteLine(a.ToString()));
             }
         }
-        public static string setType(string formato)
+        public static string setType(string format)
         {
-            return Constantes.NAME_FOR_SAVE + formato;
+            return Constant.NAME_FOR_SAVE + format;
         }
 
         public static void saveXML()
         {
-            string nameToSaveXml = setType(Constantes.XML_TYPE);
-            File.Copy(Constantes.FULL_PATH_XML_FILE, BuildPathByName(nameToSaveXml));
+            string nameToSaveXml = setType(Constant.XML_TYPE);
+            File.Copy(Constant.FULL_PATH_XML_FILE, BuildPathByName(nameToSaveXml));
         }
 
         public static String BuildPathByName(string fileName)
         {
-            return Path.Combine(Constantes.PATH_APP, Constantes.SOURCE_STATIC, fileName);
+            return Path.Combine(Constant.PATH_APP, Constant.SOURCE_STATIC, fileName);
         }
     }
 }
@@ -98,26 +100,28 @@ namespace GADS2014M7.Libray.libs
 ### Program.cs
 
 ``` C#
-using System;
+ using System;
 using GADS2014M7.Libray;
 using GADS2014M7.Libray.libs;
 using System.Xml.Linq;
 using System.Collections.Generic;
+using NHibernate;
 namespace GADS2014M7.AV1Parte2
 {
     class Program
     {
         static void Main(string[] args)
         {
-           // NHibernateHelper.GeraSchema(); // cria banco de dados
-            string fileName = Constantes.FULL_PATH_XML_FILE;
-            XDocument xmlDocument = XDocument.Load(fileName); // recebe o modelo
-            ParseAluno<XDocument> parse = new ParseAluno<XDocument>(xmlDocument); // chama Alguem competente para fazer parse de aluno
-            List<Aluno> alunos = parse.getFromXml(); // recebe a lista prontinha do parse
-            alunos.ForEach(a => Console.WriteLine(a.ToString())); // printa tudo na tela
-            AlunoFileMananger.saveXML(); // muda o nome do arquivo xml
-            AlunoFileMananger.saveLog(alunos); // salva um log tb
-            Console.Read(); // lock na tela
+            ISession AlunoRepository = NHibernateHelper.OpenSession();
+            string fileName = Constant.FULL_PATH_XML_FILE;
+            XDocument xmlDocument = XDocument.Load(fileName); 
+            ParseAluno<XDocument> parse = new ParseAluno<XDocument>(xmlDocument); 
+            List<Aluno> alunos = parse.getFromXml(); 
+            alunos.ForEach(a => Console.WriteLine(a.ToString()));
+            alunos.ForEach(a => AlunoRepository.Save(a)); 
+            AlunoFileMananger.saveXML(); 
+            AlunoFileMananger.saveLog(alunos); 
+            Console.Read(); 
         }
     }
 }
@@ -136,27 +140,24 @@ namespace GADS2014M7.Libray
 {
     public class Aluno
     {
-        public int matricula {get;set;}
-        public string  nome {get;set;}
-        public string sobrenome {get;set;}
-        public string codigoCurso {get;set;}
-        public string nomeCurso {get;set;}
-        public Boolean statusAluno { get; set; }
+        public virtual int matricula {get;set;}
+        public virtual string nome { get; set; }
+        public virtual string sobrenome { get; set; }
+        public virtual string codigoCurso { get; set; }
+        public virtual string nomeCurso { get; set; }
+        public virtual Boolean statusAluno { get; set; }
 
         public override string ToString()
         {
             StringBuilder sd = new StringBuilder();
             foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(this))
-            {
-                string name = descriptor.Name;
-                object value = descriptor.GetValue(this);
-                sd.Append(name + " = " + value+"\n");
-            }
+                sd.Append(descriptor.Name + " = " + descriptor.GetValue(this) + "\n");
             return sd.ToString();  
         }
 
     }      
 }
+
 
 ```
 
@@ -170,16 +171,18 @@ namespace GADS2014M7.Libray.libs
     public class Constant
     {   
         public static string PATH_APP = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-        public static string FILE_XML = "ExportaAlunos-Isvaldo.xml";
-        public static string SOURCE_STATIC = "static";
+        public static string XML_TYPE = ".xml";
+        public static string FILE_XML = "ExportaAlunos-Isvaldo" + XML_TYPE;
+        public static string SOURCE_STATIC = "static"; 
         public static string FULL_PATH_XML_FILE = Path.Combine(PATH_APP, SOURCE_STATIC, FILE_XML);
         public static string DATA_FORMAT = "yyyyMMdd-HHmmsstt";
         public static string NAME_FOR_SAVE = "ExportaAlunos-IsvaldoFernandes" +
             "-" + DateTime.Now.ToString(DATA_FORMAT);
         public static string LOG_TYPE = "-Log.txt";
-        public static string XML_TYPE = ".xml";
+      
     }
 }
+
 ```
 
 
