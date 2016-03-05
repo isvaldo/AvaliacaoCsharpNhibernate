@@ -1,4 +1,5 @@
-﻿using NHibernate.Cfg;
+﻿using NHibernate;
+using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace GADS2014M7.Libray
 {
     public class NHibernateHelper
     {
-        public static Configuration RecuperaConfiguracao()
+        public static Configuration GetConfig()
         {
             Configuration cfg = new Configuration();
             cfg.Configure();
@@ -21,8 +22,17 @@ namespace GADS2014M7.Libray
 
         public static void GeraSchema()
         {
-            Configuration cfg = RecuperaConfiguracao();
+            Configuration cfg = GetConfig();
             new SchemaExport(cfg).Create(true, true);
+        }
+
+
+    
+        public static ISession OpenSession()
+        {
+            Configuration cfg = NHibernateHelper.GetConfig();
+            ISessionFactory sessionFactory = cfg.BuildSessionFactory();
+            return sessionFactory.OpenSession();
         }
 
     }

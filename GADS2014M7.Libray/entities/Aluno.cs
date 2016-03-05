@@ -6,12 +6,12 @@ namespace GADS2014M7.Libray
 {
     public class Aluno
     {
-        public int matricula {get;set;}
-        public string  nome {get;set;}
-        public string sobrenome {get;set;}
-        public string codigoCurso {get;set;}
-        public string nomeCurso {get;set;}
-        public Boolean statusAluno { get; set; }
+        public virtual int matricula {get;set;}
+        public virtual string nome { get; set; }
+        public virtual string sobrenome { get; set; }
+        public virtual string codigoCurso { get; set; }
+        public virtual string nomeCurso { get; set; }
+        public virtual Boolean statusAluno { get; set; }
 
         public override string ToString()
         {

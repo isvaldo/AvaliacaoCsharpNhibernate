@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="libs\AlunoFileMananger.cs" />
-    <Compile Include="libs\Constantes.cs" />
+    <Compile Include="libs\Constant.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="entities\Aluno.cs" />
     <Compile Include="libs\ParseAluno.cs" />
